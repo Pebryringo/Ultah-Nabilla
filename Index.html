@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Selamat Ulang Tahun Nabilla</title>
   <style>
     body {
@@ -67,12 +67,16 @@
   </style>
 </head>
 <body>
+  <audio autoplay loop>
+    <source src="happy-birthday.mp3" type="audio/mpeg" />
+    Browser Anda tidak mendukung audio.
+  </audio>
+
   <div class="container">
     <h1>🎉 Selamat Ulang Tahun Nabilla Putri Aninda 🎉</h1>
   </div>
 
   <script>
-    // Membuat balon-balon
     function createBalloon() {
       const balloon = document.createElement('div');
       balloon.classList.add('balloon');
@@ -80,20 +84,14 @@
       balloon.style.backgroundColor = getRandomColor();
       balloon.style.animationDuration = (5 + Math.random() * 5) + 's';
       document.body.appendChild(balloon);
-
-      // Hapus balon setelah selesai animasi
-      setTimeout(() => {
-        balloon.remove();
-      }, 10000);
+      setTimeout(() => balloon.remove(), 10000);
     }
 
-    // Warna balon random
     function getRandomColor() {
       const colors = ['#ff69b4', '#ffcc00', '#00ccff', '#cc66ff', '#66ff66', '#ff6666'];
       return colors[Math.floor(Math.random() * colors.length)];
     }
 
-    // Interval pembuatan balon
     setInterval(createBalloon, 500);
   </script>
 </body>
